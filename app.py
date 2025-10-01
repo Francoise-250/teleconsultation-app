@@ -3,7 +3,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+#from sklearn.ensemble import RandomForestClassifier
 
 # -----------------------------
 # Page config with icon
@@ -54,4 +54,5 @@ features = np.array([[age, sex_val, location_val, systolic_bp, diastolic_bp, hea
 if st.button("🔍 Predict Referral"):
     prediction = model.predict(features)
     result = "✅ Referral Required" if prediction[0] == 1 else "❌ No Referral Needed"
+
     st.subheader(f"Prediction Result: {result}")
