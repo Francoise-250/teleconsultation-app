@@ -3,7 +3,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-#from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 # -----------------------------
 # Page config with icon
@@ -56,3 +56,4 @@ if st.button("🔍 Predict Referral"):
     result = "✅ Referral Required" if prediction[0] == 1 else "❌ No Referral Needed"
 
     st.subheader(f"Prediction Result: {result}")
+
